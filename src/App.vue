@@ -121,14 +121,16 @@ export default {
     <p class="text-blue-600 text-center">Find your favourite smart watch.</p>
     <h2 class="text-[36px] font-bold text-center">Our Latest Products</h2>
   </div>
-  <div class="container grid grid-cols-3">
-    <div
-      v-for="(img, index) in watch_products"
-      :key="index"
-      class="bg-[#F6F6F6] rounded-2xl p-10 gap-7"
-    >
-      <img :src="img" alt="" />
-      <h3 class="text-2xl font-bold mb-2">{{ product_name[index] }}</h3>
+  <div class="container">
+    <div class="grid grid-cols-3 gap-5">
+      <div
+        v-for="(img, index) in watch_products"
+        :key="index"
+        class="bg-[#F6F6F6] rounded-2xl p-10 gap-7 flex flex-col items-center"
+      >
+        <img :src="img" alt="" class="w-[250px] h-[280px] p-4" />
+        <h3 class="text-2xl font-bold mb-2">{{ product_name[index] }}</h3>
+      </div>
     </div>
   </div>
 </template>
