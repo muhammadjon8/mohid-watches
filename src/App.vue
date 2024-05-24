@@ -3,12 +3,32 @@ export default {
   data() {
     return {
       text_color: "text-[#8B8E99]",
-      images: ["./public/apple.png", "./public/apple.png", "./public/apple.png"],
+      images: [
+        "./public/apple.png",
+        "./public/apple.png",
+        "./public/apple.png",
+      ],
       watchName: ["Apple", "Xiaomi", "FitBit"],
       watchInfo: [
         "Apple is one of the most famous smart watches providing company.",
         "Xiaomi smart watches are produced by MI company.",
         "FitBit smart watches are best for their health and fitness features.",
+      ],
+      watch_products: [
+        "./public/apple.png",
+        "./public/apple.png",
+        "./public/apple.png",
+        "./public/apple.png",
+        "./public/apple.png",
+        "./public/apple.png",
+      ],
+      product_name: [
+        "Apple Smart I",
+        "Apple Smart II",
+        "Samsung Smart",
+        "Xiaomi Smart",
+        "Fitbit Max 1",
+        "Apple Smart IV",
       ],
     };
   },
@@ -94,6 +114,21 @@ export default {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="text-blue-600 text-center">Find your favourite smart watch.</p>
+    <h2 class="text-[36px] font-bold text-center">Our Latest Products</h2>
+  </div>
+  <div class="container grid grid-cols-3">
+    <div
+      v-for="(img, index) in watch_products"
+      :key="index"
+      class="bg-[#F6F6F6] rounded-2xl p-10 gap-7"
+    >
+      <img :src="img" alt="" />
+      <h3 class="text-2xl font-bold mb-2">{{ product_name[index] }}</h3>
     </div>
   </div>
 </template>
