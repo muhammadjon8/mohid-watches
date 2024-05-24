@@ -4,7 +4,7 @@ export default {
     return {
       text_color: "text-[#8B8E99]",
       images: [
-        "./public/apple.png",
+        "../src/assets/search.svg",
         "./public/apple.png",
         "./public/apple.png",
       ],
@@ -49,7 +49,7 @@ export default {
         </div>
         <div class="flex gap-3">
           <button>
-            <img src="./assets/search.svg" alt="" />
+            <img src="../src/assets/search.svg" alt="" />
           </button>
           <button>
             <img src="./assets/person.svg" alt="" />
